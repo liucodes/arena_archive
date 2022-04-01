@@ -1,26 +1,91 @@
 /* These styles are just to make it easier to see the blocks, initially. */
 
 body {
-	font-family: monospace;
-	padding: 40px;
+	font-family: sans-serif;
+	padding: 20px;
+	align-items: center;
 }
 
-a {
-	color: royalblue;
+header {
+	padding: 10px;
+	background-color: white;
+	position: fixed;
+	width: 100%;
+	top:0%;
+	height: 40px;
 }
 
-h1, h2, h3 {
-	font-size: 200%;
+hr {
+    height: 3px;
+		position: sticky;
+		border: 3px;
 }
 
-section,
-figure {
-	margin-top: 80px;
+
+}
+
+h1 {
+
+	color: black;
+	text-align: center;
+	font-family: sans-serif;
+	font-size: 18px;
+}
+
+}
+
+h2, h3 {
+	font-size: 100%;
+}
+
+section{
+	margin-top: 150px;
 	max-width: 600px;
 }
 
+a {
+	color: black;
+	font-family: sans-serif;
+}
+
+p {
+	margin-top: 4%;
+	margin-bottom: 10%;
+}
+
+figure:not(:first-child) {
+	margin-top: 20px;
+	max-width: 600px;
+}
+
+
+.two-column {
+	display: flex;
+	position: fixed;
+	gap:0px;
+	margin: 10px;
+}
+
+.six-column {
+	display: flex;
+	gap:10%;
+}
+
+.three-column {
+	margin-left: 50%;
+
+}
+
+.center {
+	margin: auto;
+	width: 60%;
+	padding: 10px;
+
+}
+
+
 #channel-description > *,
-figure > *:not(:first-child),
+figure > *:not(:firs t-child),
 .description > *:not(:first-child),
 .content > *:not(:first-child) {
 	display: block;
