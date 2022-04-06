@@ -1,97 +1,113 @@
 <!doctype html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link href="assets/reset.css" rel="stylesheet">
-		<link href="assets/style.css" rel="stylesheet">
-		<script src="assets/arena.js"></script>
-		<link href="assets/favicon.png" rel="icon">
-	</head>
-	<body>
 
-		<!-- Replace this URL with your channel to connect the API! -->
-		<a href="https://www.are.na/vern-liu-1ov_c1lpr70/webclocks" id="channel-url">
-			<h1 id="channel-title"></h1> <!-- The channel title will be inserted inside this h1. -->
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="assets/reset.css" rel="stylesheet">
+	<link href="assets/style.css" rel="stylesheet">
+	<script src="assets/arena.js"></script>
+	<link href="assets/favicon.png" rel="icon">
+</head>
+
+<body>
+
+	<!-- Replace this URL with your channel to connect the API! -->
+	<a href="https://www.are.na/vern-liu-1ov_c1lpr70/webclocks" id="channel-url">
+		<h1 id="channel-title"></h1> <!-- The channel title will be inserted inside this h1. -->
+	</a>
+	<div id="channel-description"></div> <!-- Same here for the channel description. -->
+
+
+
+	<header class="six-column">
+		<a href="index.html"> SHAPES OF TIME </a>
+		<a href="home.html">00:00 AM</a>
+		<a href="02am.html">02:00 AM</a>
+		<a href="04am.html">04:00 AM</a>
+		<a>→06:00 AM</a>
+		<a href="08am.html">08:00 AM</a>
+		<a href="https://www.are.na/vern-liu-1ov_c1lpr70" target="_blank">ARE.NA</a>
+
+
+	</header>
+	<header class="six-column-mobile">
+		<a href="index.html"> SHAPES OF TIME </a>
+		<div id="mobileLinks">
+			<a href="home.html">00:00 AM</a>
+			<a href="02am.html">02:00 AM</a>
+			<a href="04am.html">04:00 AM</a>
+			<a>→06:00 AM</a>
+			<a href="08am.html">08:00 AM</a>
+			<a href="https://www.are.na/vern-liu-1ov_c1lpr70" target="_blank">ARE.NA</a>
+		</div>
+		<a href="javascript:void(0);" class="mobileIcon" onclick="functionNameHere">&#9679;
+			<!--setup for javascript addition later-->
 		</a>
-		<div id="channel-description"></div> <!-- Same here for the channel description. -->
+	</header>
 
 
 
-			<header class="six-column">
-			  <a href="index.html"> SHAPES OF TIME </a>
-				<a href="home.html">00:00 AM</a>
-				<a href="02am.html">02:00 AM</a>
-				<a href="04am.html">04:00 AM</a>
-				<a>→06:00 AM</a>
-				<a href="08am.html">08:00 AM</a>
-				<a href="https://www.are.na/vern-liu-1ov_c1lpr70" target="_blank">ARE.NA</a>
+	<div class="two-column">
+		<section class="text-blocks">
+		</section>
+	</div>
 
-
-		</header>
-
-
-
-  <div class="two-column">
-	 <section class="text-blocks">
-		 </section>
-	 </div>
-
-	 <div class="three-column">
-		 <section class="link-blocks">
+	<div class="three-column">
+		<section class="link-blocks">
 		</section>
 
 		<section class="image-blocks">
-	 </section>
-		</div>
-		<!-- These are the templates for the various block types, below. -->
-		<!-- You can move/nest/remove any of the insertion points! -->
-		<!-- For example, you could only show images for actual image blocks. -->
-		<!-- You could not show the type if you group them by section, above. -->
+		</section>
+	</div>
+	<!-- These are the templates for the various block types, below. -->
+	<!-- You can move/nest/remove any of the insertion points! -->
+	<!-- For example, you could only show images for actual image blocks. -->
+	<!-- You could not show the type if you group them by section, above. -->
 
 
 
-		<template id="image-block">
-			<figure class="image-block">
-				<img class="image">
-				<a class="link">
-				</a>
-		</template>
+	<template id="image-block">
+		<figure class="image-block">
+			<img class="image">
+			<a class="link">
+			</a>
+	</template>
 
-		<template id="link-block">
-			<figure class="link-block">
-				<img class="image">
-				<a class="link">
-					<p class="link-title"></p>
-				</a>
-			</figure>
-		</template>
+	<template id="link-block">
+		<figure class="link-block">
+			<img class="image">
+			<a class="link">
+				<p class="link-title"></p>
+			</a>
+		</figure>
+	</template>
 
-		<template id="pdf-block">
-			<figure class="pdf-block">
-				<h3 class="title"></h3>
-				<img class="image">
-				<a class="link"> <!-- PDF link inserts here. -->
-					<p class="link-title"></p> <!-- Repeats the block title. -->
-				</a>
-				<figcaption class="description"></figcaption>
-				<p class="type"></p>
-			</figure>
-		</template>
+	<template id="pdf-block">
+		<figure class="pdf-block">
+			<h3 class="title"></h3>
+			<img class="image">
+			<a class="link">
+				<!-- PDF link inserts here. -->
+				<p class="link-title"></p> <!-- Repeats the block title. -->
+			</a>
+			<figcaption class="description"></figcaption>
+			<p class="type"></p>
+		</figure>
+	</template>
 
-		<template id="text-block">
-			<figure class="text-block">
-				<h3 class="title"></h3>
-				<div class="content"></div> <!-- Text blocks insert their HTML here. -->
-				<figcaption class="description"></figcaption>
-			</figure>
-		</template>
-
-
-
+	<template id="text-block">
+		<figure class="text-block">
+			<h3 class="title"></h3>
+			<div class="content"></div> <!-- Text blocks insert their HTML here. -->
+			<figcaption class="description"></figcaption>
+		</figure>
+	</template>
 
 
 
 
-	</body>
-</html>
+
+
+
+</body>
