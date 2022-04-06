@@ -11,18 +11,16 @@ header {
 	background-color: white;
 	position: fixed;
 	width: 100%;
-	top:0%;
+	top: 0%;
 	height: 40px;
 }
 
 hr {
-    height: 3px;
-		position: sticky;
-		border: 3px;
+	height: 3px;
+	position: sticky;
+	border: 3px;
 }
 
-
-}
 
 h1 {
 
@@ -32,13 +30,12 @@ h1 {
 	font-size: 18px;
 }
 
-}
-
-h2, h3 {
+h2,
+h3 {
 	font-size: 100%;
 }
 
-section{
+section {
 	margin-top: 150px;
 	max-width: 600px;
 }
@@ -62,18 +59,23 @@ figure:not(:first-child) {
 .two-column {
 	display: flex;
 	position: fixed;
-	gap:0px;
+	gap: 0px;
 	margin: 10px;
 }
 
 .six-column {
 	display: flex;
-	gap:10%;
+	gap: 10%;
 }
 
 .three-column {
 	margin-left: 50%;
 
+}
+
+.text-blocks {
+	display: block;
+	max-width: 765px;
 }
 
 .center {
@@ -83,13 +85,66 @@ figure:not(:first-child) {
 
 }
 
+.six-column-mobile {
+	display: none;
+}
 
-#channel-description > *,
-figure > *:not(:firs t-child),
-.description > *:not(:first-child),
-.content > *:not(:first-child) {
+#mobileLinks {
+	display: none;
+}
+
+.mobileIcon {
+	display: none;
+}
+
+#channel-description>*,
+figure>*:not(:firs t-child),
+.description>*:not(:first-child),
+.content>*:not(:first-child) {
 	display: block;
 	margin-top: 1em;
 }
 
 /* Clear them out once you’ve got your channel plugged in! */
+
+@media (max-width: 425px) {
+
+	body {
+		padding: 0;
+	}
+
+	section {
+		margin-top: 50px;
+	}
+
+	.six-column {
+		display: none;
+	}
+
+	.six-column-mobile {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		gap: 0;
+	}
+
+	#mobileLinks {
+		display: none;
+	}
+
+	.mobileIcon {
+		font-size: 40px;
+		display: block;
+	}
+
+	.two-column {
+		padding: 0 20px;
+		position: static;
+	}
+
+	.three-column {
+		margin-left: 0;
+		padding: 0 20px 20px;
+	}
+
+}
