@@ -7,6 +7,7 @@
 	<link href="assets/reset.css" rel="stylesheet">
 	<link href="assets/style.css" rel="stylesheet">
 	<script src="assets/arena.js"></script>
+	<script src="assets/mobile.js"></script>
 	<link href="assets/favicon.png" rel="icon">
 </head>
 
@@ -35,20 +36,26 @@
 
 	</header>
 
+
 	<header class="six-column-mobile">
 		<a href="index.html"> SHAPES OF TIME </a>
+		<a href="javascript:void(0);" id="mobileIcon" onclick="openNav()">
+			&#9679;
+		</a>
+	</header>
+	<div id="mobileNav" class="overlay">
+		<span class="closeBtn" onclick="closeNav()">&#9679;</span>
 		<div id="mobileLinks">
-			<h1>→00:00 AM </h1>
+			<a href="home.html">00:00 AM</a>
 			<a href="02am.html">02:00 AM</a>
 			<a href="04am.html">04:00 AM</a>
 			<a href="06am.html">06:00 AM</a>
 			<a href="08am.html">08:00 AM</a>
 			<a href="https://www.are.na/vern-liu-1ov_c1lpr70" target="_blank">ARE.NA</a>
 		</div>
-		<a href="javascript:void(0);" class="mobileIcon" onclick="functionNameHere">&#9679;
-			<!--setup for javascript addition later-->
-		</a>
+	</div>
 	</header>
+	</div>
 
 
 	<!-- All the channel “blocks” will be created as children, here. -->
@@ -97,3 +104,5 @@
 
 
 </body>
+
+</html>
